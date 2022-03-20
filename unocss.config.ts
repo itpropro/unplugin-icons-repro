@@ -1,7 +1,7 @@
 import {
   defineConfig,
   presetAttributify,
-  presetIcons,
+  //  presetIcons,
   presetUno,
   presetWebFonts,
   // transformerDirectives,
@@ -16,10 +16,10 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
-    presetIcons({
-      scale: 1.2,
-      warn: true,
-    }),
+    /*     presetIcons({
+          scale: 1.2,
+          warn: true,
+        }), */
     presetWebFonts({
       fonts: {
         sans: 'DM Sans',

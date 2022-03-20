@@ -1,50 +1,21 @@
 <script setup lang="ts">
-const name = $ref('')
-
-const router = useRouter()
-const go = () => {
-  if (name)
-    router.push(`/hi/${encodeURIComponent(name)}`)
-}
+import Meteor from '~icons/custom-icons/meteor'
+// import Ghost from '~icons/custom-icons/ghost'
 </script>
 
 <template>
   <div>
     <div i-carbon-campsite text-4xl inline-block />
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">
-        Vitesse Lite
-      </a>
+    <p text-2xl pb-4>
+      unplugin-icons
     </p>
-    <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
-    </p>
-
-    <div py-4 />
-
-    <input
-      id="input"
-      v-model="name"
-      placeholder="What's your name?"
-      type="text"
-      autocomplete="false"
-      p="x-4 y-2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
-    >
-
+    <div pb-2>
+      <p>Explicit import:</p>
+      <meteor text-yellow-500 mx-auto />
+    </div>
     <div>
-      <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
-      >
-        Go
-      </button>
+      <p>Implicit import:</p>
+      <ghost mx-auto />
     </div>
   </div>
 </template>
